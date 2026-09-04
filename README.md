@@ -1,7 +1,6 @@
 # FinProof — Evidence-Driven Financial Control
 
-> A deterministic, evidence-driven financial control system that reconciles multi-source transaction data, reconstructs financial event chains, verifies expected financial states, investigates discrepancies, and routes cases toward controlled resolution or human review.
-
+> An AI-assisted, evidence-driven financial control system that reconciles multi-source transaction data, reconstructs financial event chains, verifies expected financial states, investigates discrepancies, and routes cases toward controlled resolution or human review.
 ---
 
 ## Overview
@@ -24,7 +23,7 @@ The system processes financial records from multiple sources, builds relationshi
 
 The central design principle is:
 
-> **AI may assist investigation, but deterministic controls remain authoritative for financial correctness and final policy decisions.**
+> **AI is used for reasoning over financial evidence, while deterministic controls remain authoritative for financial correctness and final policy decisions.**
 
 ---
 
@@ -296,67 +295,6 @@ This creates an explicit AI boundary:
 - REST APIs
 - Reproducible synthetic data generation
 - Controlled failure simulation
-
----
-
-## Project Structure
-
-```text
-FinProof/
-│
-├── app/
-│   ├── api/
-│   │   ├── batches.py
-│   │   ├── reconciliation.py
-│   │   ├── verification.py
-│   │   └── decision.py
-│   │
-│   ├── application/
-│   │   ├── pipeline.py
-│   │   ├── batch_runtime.py
-│   │   ├── decision_runtime.py
-│   │   ├── ingestion.py
-│   │   ├── models.py
-│   │   ├── demo_scenarios.py
-│   │   └── failure_simulation.py
-│   │
-│   ├── evidence/
-│   │   ├── graph.py
-│   │   └── relationship_resolver.py
-│   │
-│   ├── reconciliation/
-│   │   └── service.py
-│   │
-│   ├── reconstruction/
-│   │   ├── reconstructor.py
-│   │   ├── result.py
-│   │   └── event_chain.py
-│   │
-│   ├── verification/
-│   │   ├── verifier.py
-│   │   ├── expected_state.py
-│   │   ├── discrepancy.py
-│   │   ├── invariants.py
-│   │   └── models.py
-│   │
-│   ├── investigation/
-│   │   └── workflow.py
-│   │
-│   └── ...
-│
-├── frontend/
-│   ├── src/
-│   ├── vite.config.ts
-│   └── ...
-│
-├── tests/
-│
-├── reports/
-│
-├── .gitignore
-├── README.md
-└── ...
-```
 
 ---
 
@@ -1058,7 +996,7 @@ Potential research dimensions include:
 
 ## AI Safety Boundary
 
-A major design constraint of FinProof is that AI is not allowed to silently become the source of financial truth.
+FinProof deliberately uses AI where reasoning over financial evidence adds value, while keeping financial correctness deterministic and auditable.
 
 The intended boundary is:
 
